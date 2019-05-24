@@ -40,48 +40,12 @@ class ViewController: UIViewController {
 
 
     override func viewDidLoad() {
-        //customs button
-        Ac_Outlet.layer.cornerRadius = 25
-        Du_Outlet.layer.cornerRadius = 25
-        phanTram_Outlet.layer.cornerRadius = 25
-        chia_Outlet.layer.cornerRadius = 25
-        nhan_Outlet.layer.cornerRadius = 25
-        tru_Outlet.layer.cornerRadius = 25
-        cong_Outlet.layer.cornerRadius = 25
-        bang_Outlet.layer.cornerRadius = 25
-        phay_Outlet.layer.cornerRadius = 25
-        Ko_Outlet.layer.cornerRadius = 25
-        mot_Outlet.layer.cornerRadius = 25
-        hai_Outlet.layer.cornerRadius = 25
-        ba_Outlet.layer.cornerRadius = 25
-        bon_Outlet.layer.cornerRadius = 25
-        nam_Outlet.layer.cornerRadius = 25
-        sau_Outlet.layer.cornerRadius = 25
-        bay_Outlet.layer.cornerRadius = 25
-        tam_Outlet.layer.cornerRadius = 25
-        chin_Outlet.layer.cornerRadius = 25
-        // custom boder
-        Ac_Outlet.layer.borderWidth = 1
-        Du_Outlet.layer.borderWidth = 1
-        phanTram_Outlet.layer.borderWidth = 1
-        chia_Outlet.layer.borderWidth = 1
-        nhan_Outlet.layer.borderWidth = 1
-        tru_Outlet.layer.borderWidth = 1
-        cong_Outlet.layer.borderWidth = 1
-        bang_Outlet.layer.borderWidth = 1
-        phay_Outlet.layer.borderWidth = 1
-        Ko_Outlet.layer.borderWidth = 1
-        mot_Outlet.layer.borderWidth = 1
-        hai_Outlet.layer.borderWidth = 1
-        ba_Outlet.layer.borderWidth = 1
-        bon_Outlet.layer.borderWidth = 1
-        nam_Outlet.layer.borderWidth = 1
-        sau_Outlet.layer.borderWidth = 1
-        bay_Outlet.layer.borderWidth = 1
-        tam_Outlet.layer.borderWidth = 1
-        chin_Outlet.layer.borderWidth = 1
-        // create UILable
-        //Result_Lbl.backgroundColor = .red
+        setLable()
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    func setLable(){
         Result_Lbl.textColor = .white
         Result_Lbl.textAlignment = .right
         Result_Lbl.font = Result_Lbl.font.withSize(50)
@@ -94,13 +58,7 @@ class ViewController: UIViewController {
         Result_Lbl.autoresizesSubviews = false
         view.addConstraints([top, leading1, width, height])
         Result_Lbl.translatesAutoresizingMaskIntoConstraints = false
-
-
-
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
 
     @IBAction func Button_Press(_ sender: Any) {
         Ac_Outlet.setTitle("C", for: .normal)
