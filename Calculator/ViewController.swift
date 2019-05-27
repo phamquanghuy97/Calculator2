@@ -9,8 +9,7 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
     @IBOutlet weak var Ac_Outlet: UIButton!
     @IBOutlet weak var Du_Outlet: UIButton!
     @IBOutlet weak var phanTram_Outlet: UIButton!
@@ -30,22 +29,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var bay_Outlet: UIButton!
     @IBOutlet weak var tam_Outlet: UIButton!
     @IBOutlet weak var chin_Outlet: UIButton!
-
     var Result_Lbl = UILabel()
     var numberNext : Double = 0
     var numberPre : Double = 0
     var KH = 0
     var performingOperation = false
-    
-
-
     override func viewDidLoad() {
-        setLable()
+        setLabel()
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    func setLable(){
+    func setLabel(){
         Result_Lbl.textColor = .white
         Result_Lbl.textAlignment = .right
         Result_Lbl.font = Result_Lbl.font.withSize(50)
@@ -59,7 +53,6 @@ class ViewController: UIViewController {
         view.addConstraints([top, leading1, width, height])
         Result_Lbl.translatesAutoresizingMaskIntoConstraints = false
     }
-
     @IBAction func Button_Press(_ sender: Any) {
         Ac_Outlet.setTitle("C", for: .normal)
         let tag = (sender as! UIButton).tag
@@ -82,8 +75,6 @@ class ViewController: UIViewController {
             print("Số trk: ", self.numberPre)
         }
     }
-
-
     @IBAction func Operation(_ sender: Any) {
         let tag = (sender as! UIButton).tag
         // press AC btn
@@ -122,9 +113,7 @@ class ViewController: UIViewController {
             numberPre = -numberPre
             Result_Lbl.text = String(numberPre)
         }
-
         // %()
-
         else if tag == 14 {
             numberPre = numberPre / 100
             Result_Lbl.text = String(numberPre)
@@ -156,6 +145,5 @@ class ViewController: UIViewController {
             }
         }
    }
-
 }
 

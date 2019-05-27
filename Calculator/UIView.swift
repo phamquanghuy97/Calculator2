@@ -9,17 +9,16 @@
 import Foundation
 import UIKit
 extension UIView{
-    @IBInspectable var cornerRadius : CGFloat {
+    @IBInspectable var cornerRadius: CGFloat {
         get{
             return layer.cornerRadius
-
         }
         set {
             layer.cornerRadius = newValue
             layer.masksToBounds = newValue > 0
         }
     }
-    @IBInspectable var borderWidth : CGFloat{
+    @IBInspectable var borderWidth: CGFloat{
         get {
             return layer.borderWidth
         }
@@ -27,9 +26,9 @@ extension UIView{
             layer.borderWidth = newValue
         }
     }
-    @IBInspectable var boderColor : UIColor {
+    @IBInspectable var boderColor: UIColor {
         get{
-            return UIColor(cgColor: layer.borderColor!)
+            return UIColor(cgColor: layer.borderColor ?? UIColor.black.cgColor)
         }
         set {
             layer.borderColor = newValue.cgColor
